@@ -1,0 +1,36 @@
+footer {
+    background-color: black;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    justify-content: space-between;
+    display: flex;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.footer-logo a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.footer-element {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title {
+    color: white;
+} 
+
+.footer-element ul {
+    color: white;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}

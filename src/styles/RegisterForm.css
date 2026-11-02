@@ -1,0 +1,28 @@
+.register-form {
+    max-width: 500px;
+    display: flex;
+    padding: 40px;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.register-form input {
+    padding: 20px;
+    text-align: center;
+}
+
+.register-form button {
+    padding: 20px;
+    color: white;
+    background-color: black;
+}
+
+.register-form p {
+    text-align: center;
+}
+
+.error-text {
+    color: red;
+    font-size: 20px;
+}

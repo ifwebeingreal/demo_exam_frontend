@@ -1,0 +1,25 @@
+.category {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.categories-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.category-card {
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+}

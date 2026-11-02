@@ -1,0 +1,25 @@
+.header-container {
+    background-color: black;
+    display: flex;
+    padding: 50px 30px;
+    justify-content: space-between;
+}
+
+.header-logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.header-container ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.header-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
