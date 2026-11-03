@@ -1,10 +1,7 @@
 import Footer from "./components/Footer"
 import Header from "./components/Header"
-import HomePage from "./pages/HomePage"
 import { Routes, Route } from 'react-router-dom';
-import RegisterPage from "./pages/RegisterPage";
-import LoginPage from "./pages/LoginPage";
-import ProfilePage from "./pages/ProfilePage";
+import routes from "./routes";
 
 function App() {
 
@@ -13,10 +10,9 @@ function App() {
     <Header />
 
     <Routes>
-      <Route path="/" element={<HomePage />}></Route>
-      <Route path="/register" element={<RegisterPage />}></Route>
-      <Route path="/login" element={<LoginPage />}></Route>
-      <Route path="/profile" element={<ProfilePage />}></Route>
+      {routes.map((route) => {
+        return <Route path={route.path} Component={route.component}></Route>
+      })}
     </Routes>
 
     <Footer />
