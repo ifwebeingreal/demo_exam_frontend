@@ -1,8 +1,15 @@
 import '../styles/Header.css'
 import { Link } from 'react-router-dom';
+import userStore from '../store';
+import { observer } from 'mobx-react-lite';
+
 
 function Header() {
-
+    function handleLogout() {
+        localStorage.removeItem("access_token");
+        userStore.setUser(null);
+    }
+    
     return (
       <header>
         <div className="header-container">
@@ -21,8 +28,18 @@ function Header() {
 
             <div className="header-nav">
                 <ul>
-                    <li><a href="#">Корзина</a></li>
-                    <li><Link to="/profile">Профиль</Link></li>
+                    {userStore.user !== null ? (
+                        <>
+                        <li><Link to="/profile">Профиль</Link></li> 
+                        <button onClick={handleLogout}>Выйти</button>
+                        </>
+                    ) : (
+                        <>
+                       <li><a href="#">Корзина</a></li>
+                       <li><Link to="/profile">Профиль</Link></li> 
+                       </>
+                    )}
+                    
                 </ul>
             </div>
         </div>
@@ -30,5 +47,5 @@ function Header() {
     )
   }
   
-export default Header;
+export default observer(Header);
   
