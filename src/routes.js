@@ -18,7 +18,8 @@ const routes = [
     },
     {
         path: "/profile",
-        component: ProfilePage
+        component: ProfilePage,
+        private: true
     }
 ]
 
